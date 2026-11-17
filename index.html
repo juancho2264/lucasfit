@@ -9,169 +9,214 @@
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
   <script src="js/app.js" defer></script>
 </head>
 <body>
   <header class="cabecera">
     <a class="marca" href="#inicio">LUCAS<span>FIT</span></a>
-    <nav class="menu" aria-label="Secciones">
-      <a href="#metodo">Método</a>
-      <a href="#resultados">Resultados</a>
-      <a href="#planes">Planes</a>
-      <a href="#sedes">Sedes</a>
-    </nav>
-    <a class="boton boton--chico" data-whatsapp="Hola Lucas! Quiero info de las clases">Escribime</a>
+    <a class="boton boton--chico" href="#test">¿Qué plan es para mí?</a>
   </header>
 
   <main id="inicio">
-    <!-- PORTADA -->
+    <!-- PORTADA: tipo afiche -->
     <section class="portada">
+      <div class="portada__foto foto" role="img" aria-label="Foto de Lucas entrenando"><span class="foto__marca">FOTO DE LUCAS<br>(HACIENDO UNA DOMINADA)</span></div>
       <div class="portada__texto">
-        <p class="etiqueta">Entrenador de calistenia · Castelar · Ituzaingó · Padua</p>
-        <h1>Aprendé calistenia <span>desde cero</span></h1>
-        <p class="bajada">Para personas de +30 que nunca entrenaron o que dejaron. Sin gimnasio caro, con tu propio peso y un plan para <strong>cambiar tu físico en 90 días</strong>.</p>
-        <div class="acciones">
-          <a class="boton" data-whatsapp="Hola Lucas! Quiero reservar mi clase de prueba">Quiero mi clase de prueba</a>
-          <a class="boton boton--borde" href="#resultados">Ver resultados</a>
+        <p class="etiqueta revelar">Calistenia para personas de +30</p>
+        <h1>
+          <span class="linea revelar">Nunca</span>
+          <span class="linea revelar">es tarde</span>
+          <span class="linea linea--hueca revelar">para empezar</span>
+          <span class="linea linea--roja revelar">desde cero</span>
+        </h1>
+        <p class="bajada revelar">Sin gimnasio, con tu propio peso y un plan claro para <strong>cambiar tu físico en 90 días</strong>. En Castelar, Ituzaingó y Padua.</p>
+        <div class="acciones revelar">
+          <a class="boton" data-whatsapp="Hola Lucas! Quiero reservar mi clase de prueba">Reservar clase de prueba</a>
+          <a class="enlace" href="#resultados">Ver cambios reales ↓</a>
         </div>
       </div>
-      <div class="portada__foto foto" role="img" aria-label="Foto de Lucas entrenando">
-        <span class="foto__marca">FOTO DE LUCAS</span>
+      <a class="sello-giratorio" data-whatsapp="Hola Lucas! Quiero mi primera clase gratis" aria-label="Primera clase gratis">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <defs><path id="circulo" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+          <text><textPath href="#circulo">PRIMERA CLASE GRATIS · PRIMERA CLASE GRATIS ·</textPath></text>
+        </svg>
+        <span>→</span>
+      </a>
+    </section>
+
+    <!-- CINTA -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista">
+        <span>Sin gimnasio</span><span>Con tu propio peso</span><span>Desde cero</span><span>+30 años</span><span>90 días</span><span>Grupos reducidos</span>
+        <span>Sin gimnasio</span><span>Con tu propio peso</span><span>Desde cero</span><span>+30 años</span><span>90 días</span><span>Grupos reducidos</span>
+      </div>
+    </div>
+
+    <!-- ¿TE SUENA? -->
+    <section class="seccion dolor">
+      <h2 class="revelar">¿Te <span class="marcador">suena</span>?</h2>
+      <ul class="dolor__lista">
+        <li class="revelar">Arrancaste el gimnasio mil veces y siempre lo dejaste.</li>
+        <li class="revelar">Sentís que después de los 30 "ya fue".</li>
+        <li class="revelar">No sabés por dónde empezar y te da vergüenza no poder.</li>
+        <li class="revelar">Querés verte y sentirte mejor, pero no tenés un plan.</li>
+      </ul>
+      <p class="dolor__respuesta revelar">Yo también estuve ahí. <strong>Por eso armé un método para empezar de cero.</strong></p>
+    </section>
+
+    <!-- MÉTODO: línea de tiempo que se llena al bajar -->
+    <section class="seccion seccion--oscura metodo" id="metodo">
+      <div class="contenedor">
+        <p class="etiqueta revelar">El método</p>
+        <h2 class="revelar">Tu cambio en <span class="contador" data-hasta="90">0</span> días</h2>
+        <div class="linea-tiempo" id="linea-tiempo">
+          <div class="linea-tiempo__progreso"></div>
+          <article class="hito revelar"><span class="hito__punto"></span><span class="hito__dias">Semana 1–4</span><h3>Base</h3><p>Aprendés a moverte bien, a tu ritmo y sin lastimarte. Tu primera meta: <strong>10 flexiones seguidas</strong>.</p></article>
+          <article class="hito revelar"><span class="hito__punto"></span><span class="hito__dias">Semana 5–8</span><h3>Fuerza</h3><p>Llegan tu <strong>primera dominada</strong> y tus primeros fondos. Acá empezás a notar el cambio en el espejo.</p></article>
+          <article class="hito revelar"><span class="hito__punto"></span><span class="hito__dias">Semana 9–12</span><h3>Transformación</h3><p>Un físico distinto y habilidades nuevas. Terminás <strong>sabiendo entrenar solo</strong> para toda la vida.</p></article>
+        </div>
       </div>
     </section>
 
-    <ul class="cifras" aria-label="Lucas Fit en números">
-      <li><strong>90</strong><span>días de plan</span></li>
-      <li><strong>3</strong><span>sedes en zona oeste</span></li>
-      <li><strong>+4.600</strong><span>seguidores en Instagram</span></li>
-      <li><strong>0</strong><span>experiencia necesaria</span></li>
-    </ul>
-
-    <!-- MÉTODO -->
-    <section class="seccion" id="metodo">
-      <p class="etiqueta">El método</p>
-      <h2>90 días, 3 etapas</h2>
-      <ol class="etapas">
-        <li>
-          <span class="etapas__dias">Días 1–30</span>
-          <h3>Base</h3>
-          <p>Aprendés los movimientos bien hechos, a tu ritmo. Ganás fuerza y movilidad sin lastimarte.</p>
-        </li>
-        <li>
-          <span class="etapas__dias">Días 31–60</span>
-          <h3>Fuerza</h3>
-          <p>Tus primeras dominadas, fondos y flexiones completas. Acá empezás a notar el cambio en el espejo.</p>
-        </li>
-        <li>
-          <span class="etapas__dias">Días 61–90</span>
-          <h3>Transformación</h3>
-          <p>Habilidades nuevas y un físico distinto. Terminás sabiendo entrenar solo para toda la vida.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- RESULTADOS -->
-    <section class="seccion seccion--oscura" id="resultados">
-      <p class="etiqueta">Resultados reales</p>
-      <h2>Antes y después</h2>
-      <p class="seccion__bajada">Alumnos que empezaron sin saber hacer una dominada.</p>
-      <div class="resultados">
-        <article class="resultado">
-          <div class="resultado__fotos">
-            <div class="foto"><span class="foto__chip">ANTES</span></div>
-            <div class="foto foto--despues"><span class="foto__chip foto__chip--despues">DESPUÉS</span></div>
-          </div>
-          <blockquote>"Tengo 34 años y nunca había entrenado. Hoy hago dominadas y me siento mejor que a los 20."</blockquote>
-          <p class="resultado__nombre">Alumna · Castelar</p>
-        </article>
-        <article class="resultado">
-          <div class="resultado__fotos">
-            <div class="foto"><span class="foto__chip">ANTES</span></div>
-            <div class="foto foto--despues"><span class="foto__chip foto__chip--despues">DESPUÉS</span></div>
-          </div>
-          <blockquote>"Probé mil gimnasios y siempre abandonaba. Con Lucas aprendí a entrenar y no lo dejé más."</blockquote>
-          <p class="resultado__nombre">Alumno · Ituzaingó</p>
-        </article>
-        <article class="resultado">
-          <div class="resultado__fotos">
-            <div class="foto"><span class="foto__chip">ANTES</span></div>
-            <div class="foto foto--despues"><span class="foto__chip foto__chip--despues">DESPUÉS</span></div>
-          </div>
-          <blockquote>"El grupo te motiva un montón. En tres meses bajé de peso y gané fuerza."</blockquote>
-          <p class="resultado__nombre">Alumna · Padua</p>
-        </article>
+    <!-- RESULTADOS: comparador antes/después que se arrastra -->
+    <section class="seccion resultados" id="resultados">
+      <p class="etiqueta revelar">Cambios reales</p>
+      <h2 class="revelar">Deslizá y <span class="marcador">mirá</span></h2>
+      <div class="comparador revelar" id="comparador" style="--corte: 50%">
+        <div class="comparador__lado comparador__despues foto foto--despues"><span class="foto__marca">FOTO DESPUÉS</span><span class="foto__chip foto__chip--despues">DÍA 90</span></div>
+        <div class="comparador__lado comparador__antes foto"><span class="foto__marca">FOTO ANTES</span><span class="foto__chip">DÍA 1</span></div>
+        <div class="comparador__barra"><span>⟷</span></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Deslizá para comparar antes y después">
+      </div>
+      <div class="testimonios">
+        <figure class="testimonio revelar"><blockquote>"Tengo 34 años y nunca había entrenado. Hoy hago dominadas."</blockquote><figcaption>Alumna · Castelar</figcaption></figure>
+        <figure class="testimonio revelar"><blockquote>"Probé mil gimnasios y siempre abandonaba. Con Lucas no lo dejé más."</blockquote><figcaption>Alumno · Ituzaingó</figcaption></figure>
+        <figure class="testimonio revelar"><blockquote>"El grupo te motiva un montón. En tres meses me cambió el cuerpo."</blockquote><figcaption>Alumna · Padua</figcaption></figure>
       </div>
     </section>
 
     <!-- HISTORIA -->
-    <section class="seccion historia">
-      <div class="historia__foto foto" role="img" aria-label="Foto de Lucas"><span class="foto__marca">MI HISTORIA</span></div>
-      <div>
-        <p class="etiqueta">Quién soy</p>
-        <h2>De trabajar en un kiosco a entrenar personas</h2>
-        <p>Soy Lucas. Empecé a entrenar en la plaza, con lo que tenía, mientras trabajaba en un kiosco y haciendo delivery. La calistenia me cambió el físico y la cabeza.</p>
-        <p>Hoy ayudo a personas que creen que "ya es tarde" a demostrar que no. Si yo pude empezar de cero, vos también.</p>
+    <section class="seccion seccion--oscura historia">
+      <div class="contenedor historia__grilla">
+        <div class="historia__foto foto revelar" role="img" aria-label="Foto de Lucas"><span class="foto__marca">FOTO "MI CAMBIO FÍSICO"</span></div>
+        <div>
+          <p class="etiqueta revelar">Quién soy</p>
+          <h2 class="revelar">Del kiosco <span class="marcador">a la barra</span></h2>
+          <p class="revelar">Soy Lucas. Empecé a entrenar en la plaza, con lo que tenía, mientras trabajaba en un kiosco y haciendo delivery. Nadie me enseñó: aprendí equivocándome.</p>
+          <p class="revelar">Hoy le enseño a gente que cree que "ya es tarde" todo lo que a mí me hubiera ahorrado años. <strong>Si yo pude empezar de cero, vos también.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUIÉN ES -->
+    <section class="seccion paraquien">
+      <div class="paraquien__col paraquien__si revelar">
+        <h3>Es para vos si…</h3>
+        <ul><li>Tenés +30 y querés empezar de verdad</li><li>Nunca entrenaste o lo dejaste hace años</li><li>Te motiva entrenar en grupo</li><li>Querés aprender a entrenar, no solo seguir una rutina</li></ul>
+      </div>
+      <div class="paraquien__col paraquien__no revelar">
+        <h3>No es para vos si…</h3>
+        <ul><li>Buscás resultados mágicos en 2 semanas</li><li>No estás dispuesto a venir 2 veces por semana</li></ul>
+      </div>
+    </section>
+
+    <!-- TEST: recomienda un plan y manda las respuestas por WhatsApp -->
+    <section class="seccion seccion--roja test" id="test">
+      <div class="contenedor">
+        <p class="etiqueta etiqueta--blanca">30 segundos</p>
+        <h2>¿Qué plan es para vos?</h2>
+        <form class="test__form" id="form-test">
+          <fieldset class="test__paso" data-paso="0">
+            <legend>1. ¿Cuánto entrenaste antes?</legend>
+            <label><input type="radio" name="nivel" value="Nunca entrené"><span>Nunca</span></label>
+            <label><input type="radio" name="nivel" value="Entrené pero lo dejé"><span>Lo dejé hace tiempo</span></label>
+            <label><input type="radio" name="nivel" value="Entreno un poco"><span>Entreno un poco</span></label>
+          </fieldset>
+          <fieldset class="test__paso" data-paso="1" hidden>
+            <legend>2. ¿Qué querés lograr?</legend>
+            <label><input type="radio" name="objetivo" value="Bajar de peso"><span>Bajar de peso</span></label>
+            <label><input type="radio" name="objetivo" value="Ganar fuerza y músculo"><span>Ganar fuerza</span></label>
+            <label><input type="radio" name="objetivo" value="Aprender trucos de calistenia"><span>Aprender trucos</span></label>
+          </fieldset>
+          <fieldset class="test__paso" data-paso="2" hidden>
+            <legend>3. ¿Cómo preferís entrenar?</legend>
+            <label><input type="radio" name="modo" value="En grupo"><span>En grupo</span></label>
+            <label><input type="radio" name="modo" value="Solo con el profe"><span>Solo con el profe</span></label>
+            <label><input type="radio" name="modo" value="Me da igual"><span>Me da igual</span></label>
+          </fieldset>
+          <div class="test__resultado" id="test-resultado" hidden>
+            <p class="test__chico">Tu plan ideal:</p>
+            <p class="test__plan" id="test-plan"></p>
+            <p id="test-porque"></p>
+            <a class="boton boton--blanco" id="test-whatsapp">Mandarle mis respuestas a Lucas</a>
+            <button type="button" class="enlace enlace--blanco" id="test-reiniciar">Volver a empezar</button>
+          </div>
+          <div class="test__progreso" aria-hidden="true"><span></span><span></span><span></span></div>
+        </form>
       </div>
     </section>
 
     <!-- PLANES -->
-    <section class="seccion seccion--oscura" id="planes">
-      <p class="etiqueta">Planes</p>
-      <h2>Elegí cómo entrenar</h2>
+    <section class="seccion planes-seccion" id="planes">
+      <p class="etiqueta revelar">Planes</p>
+      <h2 class="revelar">Elegí cómo entrenar</h2>
       <div class="planes">
-        <article class="plan">
+        <article class="plan revelar" id="plan-grupal">
           <h3>Grupal</h3>
-          <p class="plan__detalle">Entrenás con un grupo que te motiva, en la sede que te quede cerca.</p>
+          <p>Entrenás con un grupo que te tira para arriba, en la sede que te quede cerca.</p>
           <ul><li>2 o 3 veces por semana</li><li>Plan de progresión</li><li>Grupo de WhatsApp</li></ul>
-          <a class="boton boton--borde" data-whatsapp="Hola Lucas! Quiero info del plan grupal">Consultar precio</a>
+          <a class="boton boton--borde" data-whatsapp="Hola Lucas! Quiero info del plan grupal">Consultar</a>
         </article>
-        <article class="plan plan--destacado">
+        <article class="plan plan--destacado revelar" id="plan-90">
           <span class="plan__sello">El más elegido</span>
           <h3>Plan 90 días</h3>
-          <p class="plan__detalle">El programa completo para cambiar tu físico, con seguimiento.</p>
-          <ul><li>Clases grupales</li><li>Rutina para hacer en casa</li><li>Guía de alimentación</li><li>Seguimiento semanal</li></ul>
+          <p>El programa completo para cambiar tu físico, con seguimiento.</p>
+          <ul><li>Clases grupales</li><li>Rutina para casa</li><li>Guía de alimentación</li><li>Seguimiento semanal</li></ul>
           <a class="boton" data-whatsapp="Hola Lucas! Quiero arrancar el plan de 90 días">Quiero empezar</a>
         </article>
-        <article class="plan">
+        <article class="plan revelar" id="plan-personalizado">
           <h3>Personalizado</h3>
-          <p class="plan__detalle">Clases uno a uno, adaptadas a tu nivel y tus horarios.</p>
-          <ul><li>Horario a elección</li><li>Atención 100% para vos</li><li>Ideal para lesiones</li></ul>
-          <a class="boton boton--borde" data-whatsapp="Hola Lucas! Quiero info de clases personalizadas">Consultar precio</a>
+          <p>Uno a uno, adaptado a tu nivel, tus horarios o una lesión.</p>
+          <ul><li>Horario a elección</li><li>Atención 100% para vos</li><li>Ideal si tenés una lesión</li></ul>
+          <a class="boton boton--borde" data-whatsapp="Hola Lucas! Quiero info de clases personalizadas">Consultar</a>
         </article>
       </div>
+      <p class="cupos revelar">⚡ Grupos reducidos: <strong>cupos limitados por horario</strong></p>
     </section>
 
     <!-- SEDES -->
-    <section class="seccion" id="sedes">
-      <p class="etiqueta">Dónde entreno</p>
-      <h2>3 sedes en zona oeste</h2>
-      <div class="sedes">
-        <article class="sede"><h3>Castelar</h3><p>Lunes, miércoles y viernes</p><p class="sede__hora">18:00 y 19:30</p><a href="https://www.google.com/maps/search/?api=1&query=Castelar,Buenos+Aires" target="_blank" rel="noopener">Ver en el mapa →</a></article>
-        <article class="sede"><h3>Ituzaingó</h3><p>Martes y jueves</p><p class="sede__hora">18:00 y 19:30</p><a href="https://www.google.com/maps/search/?api=1&query=Ituzaingo,Buenos+Aires" target="_blank" rel="noopener">Ver en el mapa →</a></article>
-        <article class="sede"><h3>Padua</h3><p>Sábados</p><p class="sede__hora">10:00</p><a href="https://www.google.com/maps/search/?api=1&query=San+Antonio+de+Padua,Buenos+Aires" target="_blank" rel="noopener">Ver en el mapa →</a></article>
+    <section class="seccion seccion--oscura" id="sedes">
+      <div class="contenedor">
+        <p class="etiqueta revelar">Dónde entreno</p>
+        <h2 class="revelar">Elegí tu sede</h2>
+        <div class="sedes">
+          <a class="sede revelar" href="https://www.google.com/maps/search/?api=1&query=Castelar,Buenos+Aires" target="_blank" rel="noopener"><span class="sede__nombre">Castelar</span><span>Lun · Mié · Vie — 18:00 y 19:30</span><span class="sede__flecha">↗</span></a>
+          <a class="sede revelar" href="https://www.google.com/maps/search/?api=1&query=Ituzaingo,Buenos+Aires" target="_blank" rel="noopener"><span class="sede__nombre">Ituzaingó</span><span>Mar · Jue — 18:00 y 19:30</span><span class="sede__flecha">↗</span></a>
+          <a class="sede revelar" href="https://www.google.com/maps/search/?api=1&query=San+Antonio+de+Padua,Buenos+Aires" target="_blank" rel="noopener"><span class="sede__nombre">Padua</span><span>Sábados — 10:00</span><span class="sede__flecha">↗</span></a>
+        </div>
       </div>
     </section>
 
     <!-- PREGUNTAS -->
-    <section class="seccion seccion--oscura" id="preguntas">
-      <p class="etiqueta">Preguntas frecuentes</p>
-      <h2>Lo que todos preguntan</h2>
+    <section class="seccion" id="preguntas">
+      <p class="etiqueta revelar">Preguntas frecuentes</p>
+      <h2 class="revelar">Lo que todos preguntan</h2>
       <div class="preguntas">
-        <details><summary>¿Necesito experiencia o estar en forma?</summary><p>No. El plan arranca desde cero y cada ejercicio tiene una versión más fácil para tu nivel.</p></details>
-        <details><summary>¿Sirve si tengo más de 30 (o de 40)?</summary><p>Sí, es justamente para vos. La mayoría de los alumnos arrancan después de los 30.</p></details>
-        <details><summary>¿Qué tengo que llevar?</summary><p>Ropa cómoda, zapatillas y agua. Los elementos los pongo yo.</p></details>
-        <details><summary>¿Puedo probar antes de pagar?</summary><p>Sí, escribime y coordinamos una clase de prueba.</p></details>
-        <details><summary>¿Y si tengo una lesión?</summary><p>Contámelo antes de empezar y adaptamos los ejercicios. Si hace falta, te recomiendo el plan personalizado.</p></details>
+        <details class="revelar"><summary>¿Necesito experiencia o estar en forma?</summary><p>No. Cada ejercicio tiene una versión más fácil para tu nivel.</p></details>
+        <details class="revelar"><summary>¿Sirve si tengo más de 30 (o de 40)?</summary><p>Sí, es justamente para vos. La mayoría de los alumnos arrancan después de los 30.</p></details>
+        <details class="revelar"><summary>¿Qué tengo que llevar?</summary><p>Ropa cómoda, zapatillas y agua. Los elementos los pongo yo.</p></details>
+        <details class="revelar"><summary>¿Puedo probar antes de pagar?</summary><p>Sí, la primera clase es de prueba. Escribime y la coordinamos.</p></details>
+        <details class="revelar"><summary>¿Y si tengo una lesión?</summary><p>Contámelo antes y adaptamos los ejercicios. Si hace falta, te recomiendo el plan personalizado.</p></details>
       </div>
     </section>
 
     <!-- CIERRE -->
     <section class="cierre">
-      <h2>No te rindas. <span>Empezá hoy.</span></h2>
-      <p>Escribime y coordinamos tu primera clase.</p>
-      <a class="boton" data-whatsapp="Hola Lucas! Quiero reservar mi clase de prueba">Reservar clase de prueba</a>
+      <p class="cierre__grande" aria-hidden="true">NO TE RINDAS</p>
+      <h2 class="revelar">Dentro de 90 días vas a desear <span class="marcador">haber empezado hoy</span>.</h2>
+      <a class="boton revelar" data-whatsapp="Hola Lucas! Quiero reservar mi clase de prueba">Reservar mi clase de prueba</a>
     </section>
   </main>
 
@@ -181,8 +226,9 @@
     <p><a href="https://www.instagram.com/lucaas_fit/" target="_blank" rel="noopener">Instagram @lucaas_fit</a></p>
   </footer>
 
-  <a class="whatsapp-flotante" data-whatsapp="Hola Lucas! Quiero info de las clases" aria-label="Escribir por WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
-  </a>
+  <!-- Barra fija en el celular / botón flotante en la compu -->
+  <div class="barra-accion">
+    <a class="boton" data-whatsapp="Hola Lucas! Quiero reservar mi clase de prueba">Clase de prueba gratis</a>
+  </div>
 </body>
 </html>
